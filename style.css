@@ -1,0 +1,157 @@
+/* === GENERAL === */
+body {
+  background: linear-gradient(180deg, #003300, #006600);
+  font-family: Arial, sans-serif;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.player-container {
+  width: 350px;
+  background: #004d00;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.6);
+  padding: 20px;
+  text-align: center;
+}
+
+/* === TOP CONTROLS === */
+.controls-top {
+  background: #1b2717;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  border-radius: 15px;
+  align-items: center;
+  margin-bottom: 15px;
+  
+}
+
+
+.file-input {
+  display: none;
+}
+
+.btn {
+  background: green;
+  border: 5px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  background: rgb(57, 197, 57);
+}
+
+.btn.ghost {
+  background: rgb(151, 61, 22);
+}
+
+.btn.ghost:hover{
+    background: rgb(236, 36, 49);
+}
+
+
+
+/* === PLAYER BOX === */
+.player-box {
+  background: #112350 url("image/greenbg.jpg") center/cover no-repeat;
+  border-radius: 15px;
+  padding: 40px
+}
+
+/* === COVER === */
+.cover image {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* === CONTROL BUTTONS === */
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  margin: 15px 0;
+}
+
+.controls button {
+  width: 80px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(145deg, #a05500, #007500);
+  color: #f5f4f4;
+  font-size: 22px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.controls button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 10px rgba(0,0,0,0.6);
+  background: #2a892a;
+}
+
+/* === TIME BAR === */
+.time-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin: 10px 0;
+}
+
+.time-bar input[type="range"] {
+  flex: 1;
+}
+
+/* === VOLUME BAR === */
+.volume-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+/* === PLAYLIST === */
+.playlist {
+  background: #003300;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.playlist h3 {
+  margin: 0 0 8px;
+  font-size: 1rem;
+  color: #00ff00;
+}
+
+.playlist ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.playlist li {
+  padding: 6px;
+  border-bottom: 1px solid #00aa00;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.playlist li:hover {
+  background: #005500;
+}
