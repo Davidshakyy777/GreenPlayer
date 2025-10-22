@@ -28,9 +28,7 @@ body {
   border-radius: 15px;
   align-items: center;
   margin-bottom: 15px;
-  
 }
-
 
 .file-input {
   display: none;
@@ -38,7 +36,7 @@ body {
 
 .btn {
   background: green;
-  border: 5px;
+  border: none;
   padding: 8px 14px;
   border-radius: 8px;
   color: #fff;
@@ -55,24 +53,15 @@ body {
   background: rgb(151, 61, 22);
 }
 
-.btn.ghost:hover{
-    background: rgb(236, 36, 49);
+.btn.ghost:hover {
+  background: rgb(236, 36, 49);
 }
-
-
 
 /* === PLAYER BOX === */
 .player-box {
   background: #112350 url("image/greenbg.jpg") center/cover no-repeat;
   border-radius: 15px;
-  padding: 40px
-}
-
-/* === COVER === */
-.cover image {
-  width: 100%;
-  border-radius: 10px;
-  margin-bottom: 15px;
+  padding: 40px;
 }
 
 /* === CONTROL BUTTONS === */
@@ -131,27 +120,57 @@ body {
   border-radius: 10px;
   padding: 10px;
   margin-top: 10px;
+  border: 1px solid #00aa00;
 }
 
+/* Тақырып — бекітілген (жоғарыда тұрады) */
 .playlist h3 {
   margin: 0 0 8px;
   font-size: 1rem;
   color: #00ff00;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  background: #003300;
+  z-index: 1;
 }
 
-.playlist ul {
+/* Тек әндер тізімі айналатын бөлік */
+#trackList {
+  max-height: 180px;
+  overflow-y: auto; /* Тек ішіндегі тректер айналады */
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.playlist li {
+/* Тректер стилі */
+#trackList li {
   padding: 6px;
   border-bottom: 1px solid #00aa00;
   cursor: pointer;
   transition: 0.2s;
 }
 
-.playlist li:hover {
+#trackList li:hover {
   background: #005500;
+}
+
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 400px) {
+  .player-container {
+    width: 80%;
+    padding: 15px;
+  }
+
+  .controls button {
+    width: 60px;
+    height: 35px;
+    font-size: 18px;
+  }
+
+  .btn {
+    padding: 6px 10px;
+    font-size: 14px;
+  }
 }
