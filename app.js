@@ -9,8 +9,8 @@ const progress = document.getElementById("progress");
 const currentTimeEl = document.getElementById("currentTime");
 const durationEl = document.getElementById("duration");
 const volumeSlider = document.getElementById("volume");
+const audio = document.getElementById("audioPlayer"); // тек бір ғана audio
 
-let audio = new Audio();
 let tracks = [];
 let currentTrack = 0;
 
@@ -39,7 +39,9 @@ function playTrack(index) {
   if (!tracks[index]) return;
   currentTrack = index;
   audio.src = tracks[index].url;
-  audio.play();
+  audio.play().catch(() => {
+    console.log("Playback blocked (iPhone may need user interaction)");
+  });
   playPauseBtn.textContent = "⏸️";
 }
 
